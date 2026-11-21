@@ -1,0 +1,57 @@
+AURA - Portada animada al desbloquear (Android)
+===============================================
+
+Qué hace
+  Cuando estás escuchando Apple Music y desbloqueas el teléfono, aparece una
+  pantalla con la portada de la canción entrando con animación, el fondo
+  difuminado con los colores del disco, la barra de progreso, los botones de
+  anterior / pausa / siguiente y la barra de volumen.
+  Se cierra deslizando hacia abajo, tocando afuera o sola después de unos segundos.
+
+-------------------------------------------------------------------------------
+CÓMO CONVERTIRLO EN APP (APK)  — elige UNA opción
+-------------------------------------------------------------------------------
+
+OPCIÓN A: Con Android Studio en tu PC (recomendada)
+  1. Descarga e instala Android Studio desde developer.android.com/studio
+     (deja todo como viene por defecto; descarga varios GB, ten paciencia).
+  2. Descomprime este .zip. Te queda la carpeta "aura".
+  3. Abre Android Studio > Open > elige la carpeta "aura" > OK.
+     Si pregunta "Trust project", di que sí.
+  4. Espera a que termine de cargar (abajo a la derecha dice "Gradle sync").
+     La primera vez tarda varios minutos.
+     Si te ofrece actualizar el "Android Gradle Plugin", puedes decir que sí.
+  5. Menú Build > Build App Bundle(s) / APK(s) > Build APK(s).
+  6. Cuando termine, sale un aviso abajo a la derecha: clic en "locate".
+     Ahí está el archivo app-debug.apk.
+  7. Pásalo a tu teléfono (por cable, WhatsApp a ti mismo, Drive...) y ábrelo.
+     Android te pedirá permitir "instalar apps desconocidas": acéptalo.
+
+OPCIÓN B: Sin instalar nada, usando GitHub (gratis)
+  1. Crea una cuenta en github.com.
+  2. Arriba a la derecha: "+" > New repository > nombre "aura" > Create.
+  3. En la página del repositorio: "uploading an existing file" y arrastra
+     TODO el contenido de la carpeta "aura" (incluida la carpeta .github).
+     Si tu PC oculta la carpeta .github: en el Explorador > Ver > Mostrar >
+     Elementos ocultos.  Clic en "Commit changes".
+  4. Ve a la pestaña "Actions". Se compila solo (tarda unos 5 minutos).
+  5. Cuando salga la palomita verde, entra a esa ejecución y abajo, en
+     "Artifacts", descarga "Aura-APK". Descomprímelo: ahí está app-debug.apk.
+  6. Instálalo en tu teléfono como en el paso 7 de la Opción A.
+
+-------------------------------------------------------------------------------
+CONFIGURARLO EN EL TELÉFONO
+-------------------------------------------------------------------------------
+  1. Abre Aura y toca "Activar" en los dos permisos:
+       - Acceso a notificaciones (para ver y controlar la música)
+       - Mostrar sobre otras apps (para aparecer al desbloquear)
+  2. IMPORTANTE (Android 13 o más nuevo): como la app no viene de Play Store,
+     el acceso a notificaciones puede salir en gris como "Ajuste restringido".
+     Solución: Ajustes > Apps > Aura > tres puntos (⋮) arriba a la derecha >
+     "Permitir ajustes restringidos". Luego vuelve a activarlo.
+  3. Pon música en Apple Music, bloquea el teléfono y desbloquéalo. ¡Listo!
+
+  Xiaomi / Redmi / POCO: además ve a Ajustes > Apps > Aura > Otros permisos y
+  activa "Mostrar ventanas emergentes mientras se ejecuta en segundo plano".
+  Samsung / Xiaomi / Huawei: si deja de aparecer después de un rato, quita la
+  optimización de batería para Aura (Ajustes > Apps > Aura > Batería > Sin restricciones).
